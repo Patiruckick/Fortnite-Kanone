@@ -1,0 +1,42 @@
+﻿<Window x:Class="Fortnait_Kanone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fortnait_Kanone"
+        mc:Ignorable="d"
+        Title="Fortnite Clips" Height="620" Width="1000"
+        Background="#151820" Foreground="White">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Fortnite Clips" FontSize="28" FontWeight="SemiBold"
+                   Margin="0,0,0,18" />
+
+        <Border Grid.Row="1" Background="#090B10" CornerRadius="10" Padding="2">
+            <MediaElement x:Name="VideoPlayer" LoadedBehavior="Manual"
+                          UnloadedBehavior="Stop" Stretch="Uniform" />
+        </Border>
+
+        <StackPanel Grid.Row="2" Margin="0,20,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,12">
+                <Button Click="ResumeVideo" Content="▶  Abspielen" Width="150" Height="42" Margin="0,0,12,0"
+                        FontSize="15" Background="#3A79F7" Foreground="White" BorderThickness="0" />
+                <Button Click="PauseVideo" Content="Ⅱ  Pause" Width="130" Height="42"
+                        FontSize="15" Background="#303744" Foreground="White" BorderThickness="0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="FirstClipButton" Click="PlayFirstClip"
+                        Content="Clip 1 · 00:36:57" Width="210" Height="52" Margin="0,0,12,0"
+                        FontSize="16" Background="#3A79F7" Foreground="White" BorderThickness="0" />
+                <Button x:Name="SecondClipButton" Click="PlaySecondClip"
+                        Content="Clip 2 · 00:37:28" Width="210" Height="52"
+                        FontSize="16" Background="#303744" Foreground="White" BorderThickness="0" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
